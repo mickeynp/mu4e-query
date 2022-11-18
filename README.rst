@@ -8,7 +8,10 @@ For instance:
 
 .. code-block:: common-lisp
 
-   ELISP> (mu4e-make-query '(and (subject "Your Festivus Catalogue is on its way!") (to "costanza@example.com")))
+   ELISP> (mu4e-make-query
+    '(and
+      (subject "Your Festivus Catalogue is on its way!")
+      (to "costanza@example.com")))
    "(subject:\"Your Festivus Catalogue is on its way!\" and to:costanza@example.com)"
 
 Instead of wrangling strings, you can build your queries freely using variables and nested forms to meet your needs.
