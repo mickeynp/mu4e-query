@@ -48,6 +48,24 @@ Both shorthands -- like ``f``, ``b``, ``p``, etc. -- and their longform field na
 
 You can express flags with either their long-form or shorthand names also. Date and size ranges also work.
 
+Fields and flags work the same way. They're specified as ``(flag ...)`` or ``(subject ...)``. E.g.:
+
+.. code-block:: common-lisp
+
+   (flag seen)
+   (maildir "/foo")
+   (size ("1M" .. "1G"))
+
+Range queries work the same way but require a cons to match:
+
+.. code-block:: common-lisp
+
+   ELISP> (mu4e-make-query '(size (1M .. 1G)))
+   "size:1M..1G"
+   ELISP> (mu4e-make-query '(date ( .. 1w)))
+   "date:..1w"
+
+
 
 Easy Regex Generation
 =====================
@@ -61,6 +79,8 @@ The ``(regex ...)`` form generates an ed-style regex:
    "from:/\\(?:Frank\\|George\\)/"
 
 But you can also use Emacs's excellent ``rx`` package to generate complex regex patterns. Note, though, that ``mu`` does not use Emacs's regex engine, so there are differences:
+
+.. code-block:: common-lisp
 
    ELISP> (mu4e-make-query '(from (regex "[FG] Costanza")))
    "from:/[FG] Costanza/"
