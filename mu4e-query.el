@@ -85,7 +85,8 @@
 
 (defconst mu4e--query-fields
   '(bcc h body b cc c changed k embed e file j flags flag g from f maildir m list v message-id
-        msgid i mime mime-type y path l priority prio p references r subject s tags tag x thread w to t)
+        msgid i mime mime-type y path l priority prio p references r subject s tags tag x thread w to t
+        contact)
   "List of queryable fields mu supports.")
 
 (defconst mu4e--query-range-fields '(size z date d)

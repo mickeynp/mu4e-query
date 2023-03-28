@@ -74,7 +74,9 @@
   (should (string= (mu4e-make-query '(or (flag (all-of seen trashed)) (from "foo@example.com")))
                    (mu4e-make-query '(or (and (flag seen) (flag trashed)) (from "foo@example.com")))))
   (should (string= (mu4e-make-query '(or (date (.. now)) (size ("1M" .. "1G"))))
-                   (mu4e-make-query '(or (date (nil .. now)) (size (1M .. 1G)))))))
+                   (mu4e-make-query '(or (date (nil .. now)) (size (1M .. 1G))))))
+  ;; test contact field
+  (should (string= (mu4e-make-query '(contact "foo@bar")) "contact:foo@bar")))
 
 (provide 'mu4e-query-tests)
 ;;; mu4e-query-tests.el ends here
