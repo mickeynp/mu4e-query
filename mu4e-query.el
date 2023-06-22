@@ -85,8 +85,8 @@
 
 (defconst mu4e--query-fields
   '(bcc h body b cc c changed k embed e file j flags flag g from f maildir m list v message-id
-        msgid i mime mime-type y path l priority prio p references r subject s tags tag x thread w to t
-        contact)
+    msgid i mime mime-type y path l priority prio p references r subject s tags tag x thread w to t
+    contact recip)
   "List of queryable fields mu supports.")
 
 (defconst mu4e--query-range-fields '(size z date d)
@@ -94,7 +94,7 @@
 
 (defconst mu4e--query-flags
   '(draft D flagged F passed P replied R seen S trashed T new N signed z encrypted x
-          attach a unread u list l personal q calendar c)
+    attach a unread u list l personal q calendar c)
   "List of accepted values for the `flag' field.")
 
 (defconst mu4e--query-priority '(low normal high)
