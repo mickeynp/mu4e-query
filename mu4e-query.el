@@ -1,4 +1,5 @@
 ;;; mu4e-query.el --- s-expression query builder for mu4e  -*- lexical-binding: t; -*-
+;; Version: 0.0.0-git
 
 ;; Copyright (C) 2022  Mickey Petersen
 
